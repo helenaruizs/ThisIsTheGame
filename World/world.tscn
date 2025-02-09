@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciqaknb7dc7ij"]
+
+[ext_resource type="PackedScene" uid="uid://dhwn654mhj0kj" path="res://Actors/Boy/player.tscn" id="1_8a836"]
+[ext_resource type="PackedScene" uid="uid://bdqesc6glkvb5" path="res://World/greybox-level_testA.tscn" id="2_8a836"]
+
+[node name="World" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8a836")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74574, 6.04363, 4.79236)
+
+[node name="AnimatedSprite3D" parent="Player" index="0"]
+animation = &"idle"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.799029, 0.537335, -0.269858, 0.219808, 0.156711, 0.962874, 0.559675, -0.828681, 0.00710644, 0.252524, 11.0453, -0.152697)
+light_color = Color(1, 1, 0.729412, 1)
+light_energy = 2.41
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 10.0
+light_angular_distance = 16.29
+shadow_enabled = true
+shadow_bias = 1.0
+
+[node name="Greybox-levelTestA" parent="." instance=ExtResource("2_8a836")]
+
+[editable path="Player"]

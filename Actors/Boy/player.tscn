@@ -1,0 +1,152 @@
+[gd_scene load_steps=19 format=3 uid="uid://dhwn654mhj0kj"]
+
+[ext_resource type="Texture2D" uid="uid://bjamqb7jkkf6j" path="res://Actors/Boy/player_idle.png" id="1_acvgj"]
+[ext_resource type="Script" uid="uid://c3eycjrvusnri" path="res://Actors/Boy/player.gd" id="1_j524j"]
+[ext_resource type="Texture2D" uid="uid://c4vih3p5xnbka" path="res://Actors/Boy/player_jump.png" id="3_jbm2b"]
+[ext_resource type="Texture2D" uid="uid://bgfqhaqp4ysbx" path="res://Actors/Boy/player_walk.png" id="3_jp1x7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78oa4"]
+atlas = ExtResource("1_acvgj")
+region = Rect2(0, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n8sn"]
+atlas = ExtResource("1_acvgj")
+region = Rect2(38, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b77ec"]
+atlas = ExtResource("3_jbm2b")
+region = Rect2(0, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vob65"]
+atlas = ExtResource("3_jbm2b")
+region = Rect2(38, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8p25h"]
+atlas = ExtResource("3_jp1x7")
+region = Rect2(0, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g11rv"]
+atlas = ExtResource("3_jp1x7")
+region = Rect2(38, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5qb2"]
+atlas = ExtResource("3_jp1x7")
+region = Rect2(76, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rctmp"]
+atlas = ExtResource("3_jp1x7")
+region = Rect2(114, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuyeg"]
+atlas = ExtResource("3_jp1x7")
+region = Rect2(152, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4hig"]
+atlas = ExtResource("3_jp1x7")
+region = Rect2(190, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ewfj"]
+atlas = ExtResource("3_jp1x7")
+region = Rect2(228, 0, 38, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63mo7"]
+atlas = ExtResource("3_jp1x7")
+region = Rect2(266, 0, 38, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rrs5y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78oa4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n8sn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b77ec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vob65")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8p25h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g11rv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5qb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rctmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iuyeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4hig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ewfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63mo7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ulc2"]
+radius = 0.329847
+height = 1.00251
+
+[node name="Player" type="CharacterBody3D"]
+collision_mask = 12
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_j524j")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(2.44389, 0, 0, 0, 2.44389, 0, 0, 0, 1, 0, 0, 0)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_rrs5y")
+animation = &"jump"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0130034, 0)
+shape = SubResource("CapsuleShape3D_4ulc2")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999263, -0.0383878, 0, 0.0383878, 0.999263, 1.333, 2.463, 25.451)
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 0.994028, 0.109127, 0, -0.109127, 0.994028, 0, 0.825919, 2.13264)
+fov = 10.0
+size = 8.0
+near = 0.001
+
+[node name="RayCastTop" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+target_position = Vector3(0, -10, 0)
+collision_mask = 16
+debug_shape_thickness = 5
+
+[node name="RayCastBottom" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+target_position = Vector3(0, -10, 0)
+collision_mask = 16
+debug_shape_thickness = 5

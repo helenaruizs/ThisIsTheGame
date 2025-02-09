@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://clcpre3in78bv"]
+
+[resource]
+resource_name = "PolyAdventureMaterial_Water_01"
+transparency = 4
+albedo_color = Color(0.698529, 0.825355, 1, 0.247059)
+roughness = 0.5

@@ -1,0 +1,1160 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://sp6oi35pi4re"
+path="res://.godot/imported/Demo.glb-398b1e783a7295ec106d66d00a51d9e8.scn"
+
+[deps]
+
+source_file="res://Demo.glb"
+dest_files=["res://.godot/imported/Demo.glb-398b1e783a7295ec106d66d00a51d9e8.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"PolyAdventureMaterial_01": {
+"use_external/enabled": true,
+"use_external/path": "res://AssetPacks/SyntyAdventure/Materials/PolyAdventureMaterial_01.tres"
+},
+"PolyAdventureMaterial_Water_01": {
+"use_external/enabled": true,
+"use_external/path": "res://AssetPacks/SyntyAdventure/Materials/PolyAdventureMaterial_Water_01.tres"
+}
+},
+"meshes": {
+"Demo_SM_Bld_Fence_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Fence_01.res"
+},
+"Demo_SM_Bld_Fence_01_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Fence_01_Snow.res"
+},
+"Demo_SM_Bld_Fence_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Fence_02.res"
+},
+"Demo_SM_Bld_HutDoor_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_HutDoor_01.res"
+},
+"Demo_SM_Bld_Hut_01_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Hut_01_Snow.res"
+},
+"Demo_SM_Bld_Stall_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Stall_01.res"
+},
+"Demo_SM_Bld_Stall_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Stall_02.res"
+},
+"Demo_SM_Bld_Stall_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Stall_03.res"
+},
+"Demo_SM_Bld_Stall_04": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Stall_04.res"
+},
+"Demo_SM_Bld_Stall_Cover_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Stall_Cover_02.res"
+},
+"Demo_SM_Bld_Village_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_01.res"
+},
+"Demo_SM_Bld_Village_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_02.res"
+},
+"Demo_SM_Bld_Village_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_03.res"
+},
+"Demo_SM_Bld_Village_05": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_05.res"
+},
+"Demo_SM_Bld_Village_06": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_06.res"
+},
+"Demo_SM_Bld_Village_07": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_07.res"
+},
+"Demo_SM_Bld_Village_HangingCloth_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_HangingCloth_01.res"
+},
+"Demo_SM_Bld_Village_SnowSheet_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_SnowSheet_01.res"
+},
+"Demo_SM_Bld_Village_Top_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_Top_01.res"
+},
+"Demo_SM_Bld_Village_WindowDrapes_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Village_WindowDrapes_01.res"
+},
+"Demo_SM_Bld_Wall_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Wall_01.res"
+},
+"Demo_SM_Bld_Wall_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Wall_02.res"
+},
+"Demo_SM_Bld_Well_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Bld_Well_01.res"
+},
+"Demo_SM_Env_Bridge_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Bridge_01.res"
+},
+"Demo_SM_Env_Bush_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Bush_01.res"
+},
+"Demo_SM_Env_Bush_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Bush_02.res"
+},
+"Demo_SM_Env_CampFire_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_CampFire_01.res"
+},
+"Demo_SM_Env_Cloud_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Cloud_01.res"
+},
+"Demo_SM_Env_Cloud_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Cloud_02.res"
+},
+"Demo_SM_Env_Cloud_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Cloud_03.res"
+},
+"Demo_SM_Env_Cloud_04": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Cloud_04.res"
+},
+"Demo_SM_Env_Cloud_05": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Cloud_05.res"
+},
+"Demo_SM_Env_Cloud_06": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Cloud_06.res"
+},
+"Demo_SM_Env_Cloud_07": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Cloud_07.res"
+},
+"Demo_SM_Env_DirtMound_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_DirtMound_01.res"
+},
+"Demo_SM_Env_DirtMound_01_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_DirtMound_01_Snow.res"
+},
+"Demo_SM_Env_FloorTile_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_FloorTile_01.res"
+},
+"Demo_SM_Env_FloorTile_012": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_FloorTile_012.res"
+},
+"Demo_SM_Env_FloorTile_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_FloorTile_02.res"
+},
+"Demo_SM_Env_Flower_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Flower_03.res"
+},
+"Demo_SM_Env_Flower_04": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Flower_04.res"
+},
+"Demo_SM_Env_Flower_05": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Flower_05.res"
+},
+"Demo_SM_Env_Flower_07": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Flower_07.res"
+},
+"Demo_SM_Env_Grass_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Grass_01.res"
+},
+"Demo_SM_Env_GroundMounds_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_GroundMounds_03.res"
+},
+"Demo_SM_Env_GroundMounds_04": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_GroundMounds_04.res"
+},
+"Demo_SM_Env_GroundMounds_05": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_GroundMounds_05.res"
+},
+"Demo_SM_Env_GroundMounds_06": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_GroundMounds_06.res"
+},
+"Demo_SM_Env_Hedge_01_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Hedge_01_Snow.res"
+},
+"Demo_SM_Env_HillSnow_04": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_HillSnow_04.res"
+},
+"Demo_SM_Env_Hill_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Hill_01.res"
+},
+"Demo_SM_Env_Hill_04": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Hill_04.res"
+},
+"Demo_SM_Env_Ice_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Ice_01.res"
+},
+"Demo_SM_Env_Ice_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Ice_02.res"
+},
+"Demo_SM_Env_Ice_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Ice_03.res"
+},
+"Demo_SM_Env_Lillypads_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Lillypads_01.res"
+},
+"Demo_SM_Env_Lillypads_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Lillypads_02.res"
+},
+"Demo_SM_Env_Lillypads_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Lillypads_03.res"
+},
+"Demo_SM_Env_Mushroom_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Mushroom_01.res"
+},
+"Demo_SM_Env_Plant_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Plant_02.res"
+},
+"Demo_SM_Env_Plant_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Plant_03.res"
+},
+"Demo_SM_Env_Plant_05": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Plant_05.res"
+},
+"Demo_SM_Env_Reeds_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Reeds_01.res"
+},
+"Demo_SM_Env_Reeds_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Reeds_02.res"
+},
+"Demo_SM_Env_Reeds_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Reeds_03.res"
+},
+"Demo_SM_Env_Road_Corner_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Road_Corner_01.res"
+},
+"Demo_SM_Env_Road_Cross_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Road_Cross_01.res"
+},
+"Demo_SM_Env_Road_Straight_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Road_Straight_01.res"
+},
+"Demo_SM_Env_Road_T_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Road_T_01.res"
+},
+"Demo_SM_Env_Rock_010": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Rock_010.res"
+},
+"Demo_SM_Env_Rock_013": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Rock_013.res"
+},
+"Demo_SM_Env_Rock_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Rock_03.res"
+},
+"Demo_SM_Env_Rock_05_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Rock_05_Snow.res"
+},
+"Demo_SM_Env_Rock_09": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Rock_09.res"
+},
+"Demo_SM_Env_SnowPile_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_SnowPile_01.res"
+},
+"Demo_SM_Env_SnowPile_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_SnowPile_02.res"
+},
+"Demo_SM_Env_Stream_Corner_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Stream_Corner_01.res"
+},
+"Demo_SM_Env_Stream_Corner_01_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Stream_Corner_01_Snow.res"
+},
+"Demo_SM_Env_Stream_Straight_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Stream_Straight_01.res"
+},
+"Demo_SM_Env_Stream_Straight_01_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Stream_Straight_01_Snow.res"
+},
+"Demo_SM_Env_Stream_Straight_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Stream_Straight_02.res"
+},
+"Demo_SM_Env_Stream_Straight_02_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Stream_Straight_02_Snow.res"
+},
+"Demo_SM_Env_TreeBirch_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreeBirch_01.res"
+},
+"Demo_SM_Env_TreeBirch_01_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreeBirch_01_Snow.res"
+},
+"Demo_SM_Env_TreeBirch_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreeBirch_02.res"
+},
+"Demo_SM_Env_TreeBirch_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreeBirch_03.res"
+},
+"Demo_SM_Env_TreeDead_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreeDead_01.res"
+},
+"Demo_SM_Env_TreeDead_02_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreeDead_02_Snow.res"
+},
+"Demo_SM_Env_TreeLog_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreeLog_01.res"
+},
+"Demo_SM_Env_TreePine_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreePine_01.res"
+},
+"Demo_SM_Env_TreePine_01_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreePine_01_Snow.res"
+},
+"Demo_SM_Env_TreePine_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreePine_02.res"
+},
+"Demo_SM_Env_TreePine_02_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreePine_02_Snow.res"
+},
+"Demo_SM_Env_TreePine_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreePine_03.res"
+},
+"Demo_SM_Env_TreePine_03_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreePine_03_Snow.res"
+},
+"Demo_SM_Env_TreeStump_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_TreeStump_01.res"
+},
+"Demo_SM_Env_Tree_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Tree_01.res"
+},
+"Demo_SM_Env_Tree_016": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Tree_016.res"
+},
+"Demo_SM_Env_Tree_03_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Tree_03_Snow.res"
+},
+"Demo_SM_Env_Tree_05": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Tree_05.res"
+},
+"Demo_SM_Env_Tree_07": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Tree_07.res"
+},
+"Demo_SM_Env_Tree_08": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Tree_08.res"
+},
+"Demo_SM_Env_Tree_09": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Tree_09.res"
+},
+"Demo_SM_Env_Tree_09_Snow": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Env_Tree_09_Snow.res"
+},
+"Demo_SM_Prop_Barrel_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Prop_Barrel_02.res"
+},
+"Demo_SM_Prop_Cart_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Prop_Cart_02.res"
+},
+"Demo_SM_Prop_Cart_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Prop_Cart_03.res"
+},
+"Demo_SM_Prop_Crate_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Prop_Crate_01.res"
+},
+"Demo_SM_Prop_RoadSign_01": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Prop_RoadSign_01.res"
+},
+"Demo_SM_Prop_Washingline_02": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Prop_Washingline_02.res"
+},
+"Demo_SM_Prop_Washingline_03": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://AssetPacks/SyntyAdventure/Demo/Demo_SM_Prop_Washingline_03.res"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

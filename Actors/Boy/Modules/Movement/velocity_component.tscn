@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr246qb0td6a7"]
+
+[ext_resource type="Script" uid="uid://c4wu0j75ehk1r" path="res://Modules/Movement/velocity_component.gd" id="1_5tc1o"]
+
+[node name="VelocityComponent" type="Node"]
+script = ExtResource("1_5tc1o")
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+process_callback = 0
+
+[connection signal="timeout" from="CoyoteTimer" to="." method="coyote_timeout"]

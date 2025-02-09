@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdqesc6glkvb5"]
+
+[ext_resource type="Material" uid="uid://ckm83pj8ut41s" path="res://World/Materials/greybox-grid.tres" id="1_5l2lq"]
+[ext_resource type="Script" uid="uid://dwf84037fcru1" path="res://World/greybox_level_test_a.gd" id="1_vclbx"]
+[ext_resource type="PackedScene" uid="uid://dep818vdjiul3" path="res://World/Modules/z_waypoint.tscn" id="3_cech8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5l2lq"]
+size = Vector3(3.19727, 3.39063, 7.64178)
+
+[node name="Greybox-levelTestA" type="Node3D"]
+script = ExtResource("1_vclbx")
+
+[node name="Ground" type="CSGCombiner3D" parent="."]
+layers = 4
+use_collision = true
+collision_layer = 4
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.852951, -0.347168, 2.52563)
+size = Vector3(26.8806, 1.69434, 16.4221)
+material = ExtResource("1_5l2lq")
+
+[node name="Z-move-zone-test" type="Node" parent="."]
+
+[node name="Area3D" type="Area3D" parent="Z-move-zone-test"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3005, 0.945168, 2.12416)
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Z-move-zone-test/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0858459)
+shape = SubResource("BoxShape3D_5l2lq")
+
+[node name="DestinationTop" type="Marker3D" parent="Z-move-zone-test"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.253, 0.554, -0.973)
+
+[node name="DestinationBottom" type="Marker3D" parent="Z-move-zone-test"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.253, 0.554, 4.824)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0455878, 4.82362)
+size = Vector3(12.9724, 1, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0455878, -0.972987)
+size = Vector3(12.9724, 1, 1)
+
+[node name="z-waypoints" type="Node" parent="."]
+
+[node name="z_waypoint1" parent="z-waypoints" instance=ExtResource("3_cech8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67206, 0.96493, -1.03292)
+
+[node name="z_waypoint2" parent="z-waypoints" instance=ExtResource("3_cech8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.396189, 0.96493, 4.88755)

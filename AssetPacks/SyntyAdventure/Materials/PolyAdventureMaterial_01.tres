@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://druxvj2gos0yi"]
+
+[ext_resource type="Texture2D" uid="uid://cqh5kpo6bhl6i" path="res://Demo_PolyAdventureTexture_01.jpg" id="1_eslwm"]
+
+[resource]
+resource_name = "PolyAdventureMaterial_01"
+albedo_texture = ExtResource("1_eslwm")
+roughness = 0.8
