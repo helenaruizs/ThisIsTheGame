@@ -1,5 +1,5 @@
 @tool
-class_name Player
+class_name Player_
 extends CharacterBody3D
 
 ## These notes can just be %references to the nodes in the tree, but this way, you always know if they aren't connected. 

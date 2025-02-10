@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dhwn654mhj0kj"]
+[gd_scene load_steps=20 format=3 uid="uid://dhwn654mhj0kj"]
 
 [ext_resource type="Texture2D" uid="uid://bjamqb7jkkf6j" path="res://Actors/Boy/player_idle.png" id="1_acvgj"]
 [ext_resource type="Script" uid="uid://c3eycjrvusnri" path="res://Actors/Boy/player.gd" id="1_j524j"]
@@ -111,6 +111,11 @@ animations = [{
 radius = 0.329847
 height = 1.00251
 
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_6jxc5"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 37.43
+dof_blur_far_transition = 0.5
+
 [node name="Player" type="CharacterBody3D"]
 collision_mask = 12
 axis_lock_angular_x = true
@@ -133,20 +138,22 @@ transform = Transform3D(1, 0, 0, 0, 0.999263, -0.0383878, 0, 0.0383878, 0.999263
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
 transform = Transform3D(1, 0, 0, 0, 0.994028, 0.109127, 0, -0.109127, 0.994028, 0, 0.825919, 2.13264)
+attributes = SubResource("CameraAttributesPractical_6jxc5")
+v_offset = 0.4
 fov = 10.0
 size = 8.0
-near = 0.001
+near = 20.0
 
 [node name="RayCastTop" type="RayCast3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-target_position = Vector3(0, -10, 0)
+target_position = Vector3(0, -30, 0)
 collision_mask = 16
 debug_shape_thickness = 5
 
 [node name="RayCastBottom" type="RayCast3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-target_position = Vector3(0, -10, 0)
+target_position = Vector3(0, -30, 0)
 collision_mask = 16
 debug_shape_thickness = 5

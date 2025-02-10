@@ -105,7 +105,7 @@ Jump={
 3d_physics/layer_1="Player"
 3d_physics/layer_2="Pup"
 3d_physics/layer_3="Ground"
-3d_physics/layer_4="Z-Zone"
+3d_physics/layer_4="Environment"
 3d_physics/layer_5="Z-Waypoint"
 
 [physics]

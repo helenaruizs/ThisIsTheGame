@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdqesc6glkvb5"]
+[gd_scene load_steps=4 format=3 uid="uid://bdqesc6glkvb5"]
 
 [ext_resource type="Material" uid="uid://ckm83pj8ut41s" path="res://World/Materials/greybox-grid.tres" id="1_5l2lq"]
 [ext_resource type="Script" uid="uid://dwf84037fcru1" path="res://World/greybox_level_test_a.gd" id="1_vclbx"]
 [ext_resource type="PackedScene" uid="uid://dep818vdjiul3" path="res://World/Modules/z_waypoint.tscn" id="3_cech8"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_5l2lq"]
-size = Vector3(3.19727, 3.39063, 7.64178)
 
 [node name="Greybox-levelTestA" type="Node3D"]
 script = ExtResource("1_vclbx")
@@ -16,40 +13,107 @@ use_collision = true
 collision_layer = 4
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.852951, -0.347168, 2.52563)
-size = Vector3(26.8806, 1.69434, 16.4221)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.852951, -0.347168, -11.2113)
+size = Vector3(26.8806, 1.69434, 43.8961)
 material = ExtResource("1_5l2lq")
 
-[node name="Z-move-zone-test" type="Node" parent="."]
-
-[node name="Area3D" type="Area3D" parent="Z-move-zone-test"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3005, 0.945168, 2.12416)
+[node name="EnvironmentProps" type="CSGCombiner3D" parent="."]
+use_collision = true
 collision_layer = 8
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Z-move-zone-test/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0858459)
-shape = SubResource("BoxShape3D_5l2lq")
+[node name="CSGBox3D" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67203, 2.38137)
+size = Vector3(1, 6.34406, 1)
+material = ExtResource("1_5l2lq")
 
-[node name="DestinationTop" type="Marker3D" parent="Z-move-zone-test"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.253, 0.554, -0.973)
+[node name="CSGBox3D2" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13549, 1.10649, 2.12332)
+size = Vector3(2.53809, 4.07544, 1.51611)
+material = ExtResource("1_5l2lq")
 
-[node name="DestinationBottom" type="Marker3D" parent="Z-move-zone-test"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.253, 0.554, 4.824)
+[node name="CSGBox3D4" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06312, 2.01683, 2.12332)
+size = Vector3(1.26855, 5.89612, 1.51611)
+material = ExtResource("1_5l2lq")
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+[node name="CSGBox3D5" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44972, 1.24275, 2.12332)
+size = Vector3(4.89404, 4.34796, 1.51611)
+material = ExtResource("1_5l2lq")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="CSGBox3D3" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00055, 0.730423, 2.38137)
+size = Vector3(2.53809, 4.48462, 1)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46589, 2.0294, -8.42053)
+size = Vector3(2.92969, 5.05881, 1)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.60238, 1.44219, -8.67859)
+size = Vector3(5.26074, 4.74683, 1.51611)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64107, 2.62059, -8.67859)
+size = Vector3(4.07129, 7.10364, 1.51611)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29637, 0.535723, -8.67859)
+size = Vector3(10.7985, 2.9339, 1.51611)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1061, 0.562942, -8.42053)
+size = Vector3(2.53809, 4.14966, 1)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.46589, 2.0294, -18.9775)
+size = Vector3(2.92969, 5.05881, 1)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.60238, 3.87609, -19.2356)
+size = Vector3(5.26074, 9.61462, 1.51611)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64107, 2.62059, -19.2356)
+size = Vector3(4.07129, 7.10364, 1.51611)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29637, 3.90912, -19.2356)
+size = Vector3(10.7985, 9.68069, 1.51611)
+material = ExtResource("1_5l2lq")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="EnvironmentProps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1061, 2.57338, -18.9775)
+size = Vector3(2.53809, 8.17053, 1)
+material = ExtResource("1_5l2lq")
+
+[node name="PathFPO" type="CSGCombiner3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="PathFPO"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0455878, 4.82362)
 size = Vector3(12.9724, 1, 1)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0455878, -0.972987)
+[node name="CSGBox3D3" type="CSGBox3D" parent="PathFPO"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.93395, 0.0230572, -0.696455)
+size = Vector3(11.4681, 1, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="PathFPO"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0455878, -6.14749)
 size = Vector3(12.9724, 1, 1)
 
 [node name="z-waypoints" type="Node" parent="."]
 
 [node name="z_waypoint1" parent="z-waypoints" instance=ExtResource("3_cech8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67206, 0.96493, -1.03292)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67206, 0.96493, -6.20742)
 
 [node name="z_waypoint2" parent="z-waypoints" instance=ExtResource("3_cech8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.396189, 0.96493, 4.88755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8623, 0.96493, 4.88755)

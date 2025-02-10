@@ -12,51 +12,21 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var ray_cast_bottom = %RayCastBottom
 
 var z_target: Vector3 = Vector3.ZERO  # Target position
-var is_moving_vertically: bool = false  # Whether the character is moving to the target
+var is_moving_on_z: bool = false  # Whether the character is moving on the Z-axis
 
 func _physics_process(delta):
-	if ray_cast_top.is_colliding():
-		print("Colliding")
-		# Set the target when "MoveUp" is pressed
-		if Input.is_action_just_pressed("MoveUp"):
-			z_target = ray_cast_top.get_collider().global_position
-			is_moving_vertically = true
+	# Handle upward movement
+	if ray_cast_top.is_colliding() and Input.is_action_just_pressed("MoveUp"):
+		start_moving_to(ray_cast_top.get_collider().global_position)
 
-# Move towards the target if is_moving is true
-		if is_moving_vertically:
-			var direction = global_position.direction_to(z_target)
-			var distance = global_position.distance_to(z_target)
+	# Handle downward movement
+	if ray_cast_bottom.is_colliding() and Input.is_action_just_pressed("MoveDown"):
+		start_moving_to(ray_cast_bottom.get_collider().global_position)
 
-# Stop moving if close to the target
-			if distance < 0.1:  # Adjust threshold as needed
-				velocity = Vector3.ZERO
-				is_moving_vertically = false
-			else:
-				velocity = direction * SPEED
+	# Move towards the target if is_moving_on_z is true
+	if is_moving_on_z:
+		move_to_target(delta)
 
-			move_and_slide()
-	else:
-		is_moving_vertically = false  # Stop moving if no collision
-	
-	if ray_cast_bottom.is_colliding():
-		print("Colliding bottom")
-		if Input.is_action_just_pressed("MoveDown"):
-			z_target = ray_cast_bottom.get_collider().global_position
-			is_moving_vertically = true
-
-# Move towards the target if is_moving is true
-		if is_moving_vertically:
-			var direction = global_position.direction_to(z_target)
-			var distance = global_position.distance_to(z_target)
-
-# Stop moving if close to the target
-			if distance < 0.1:  # Adjust threshold as needed
-				velocity = Vector3.ZERO
-				is_moving_vertically = false
-			else:
-				velocity = direction * SPEED
-
-			move_and_slide()
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -100,4 +70,23 @@ func _physics_process(delta):
 	#elif velocity.x or velocity.z != 0 :
 		#animated_sprite.play("walk")
 	
+	move_and_slide()
+	
+	# Function to start moving to a target position
+func start_moving_to(target_position: Vector3):
+	z_target = target_position
+	is_moving_on_z = true
+
+# Function to handle movement logic
+func move_to_target(delta):
+	var direction = global_position.direction_to(z_target)
+	var distance = global_position.distance_to(z_target)
+
+# Stop moving if close to the target
+	if distance < 0.1:  # Adjust threshold as needed
+		velocity = Vector3.ZERO
+		is_moving_on_z = false
+	else:
+		velocity = direction * SPEED * 2.0
+
 	move_and_slide()
