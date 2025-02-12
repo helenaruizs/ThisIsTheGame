@@ -1,9 +1,10 @@
 extends CharacterBody3D
 
 # === Exported properties ===
-@export var movement_speed: int = 250
+@export var movement_speed: int = 400
 @export var jump_strength: int = 10
 @export var planet_path : NodePath
+@onready var animated_sprite = $AnimatedSprite3D
 
 var gravity: Vector3
 var gravity_strength: float = 7
@@ -32,7 +33,6 @@ var orientation: Basis
 
 # Functions
 func _physics_process(delta) -> void:
-	
 	# Handle functions
 	handle_controls(delta)
 	apply_gravity(delta)
@@ -42,6 +42,23 @@ func _physics_process(delta) -> void:
 	velocity += gravity_velocity
 	
 	up_direction = -gravity.normalized()
+	
+	var horizontal_direction = input_direction.x
+	
+	if horizontal_direction < 0 :
+		animated_sprite.flip_h = false
+	elif horizontal_direction > 0 :
+		animated_sprite.flip_h = true
+	
+	if is_on_floor():
+		if input_direction == Vector2.ZERO:
+			animated_sprite.play("idle")
+		else:
+			animated_sprite.play("walk")
+	elif !is_on_floor():
+		animated_sprite.play("jump")
+	
+	
 	move_and_slide()
 
 	planet_direction = gravity.normalized()
@@ -80,13 +97,17 @@ func handle_controls(delta) -> void:
 	move_dir = (forward_dir * input_direction.y + right_dir * input_direction.x).normalized()
 	velocity = move_dir * movement_speed * delta
 	
-	if Input.is_action_just_pressed("jump"):
-		if jump_single:
-			jump_single = false
-			jump_action()
-		elif jump_double:
-			jump_double = false
-			jump_action()
+		# Handle jump.
+	if Input.is_action_just_pressed("Jump") and is_on_floor():
+		gravity_velocity = -gravity.normalized() * jump_strength
+	
+	#if Input.is_action_just_pressed("jump"):
+		#if jump_single:
+			#jump_single = false
+			#jump_action()
+		#elif jump_double:
+			#jump_double = false
+			#jump_action()
 
 # Jumping
 func jump() -> void:
