@@ -1,4 +1,4 @@
-class_name STATE
+class_name STATE_bak
 extends Node
 
 # Reference to the state machine, to call its `transition_to()` method directly.

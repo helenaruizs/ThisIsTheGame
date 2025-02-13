@@ -6,14 +6,25 @@
 [node name="World" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.799029, 0.537335, -0.269858, 0.219808, 0.156711, 0.962874, 0.559675, -0.828681, 0.00710644, 0.252524, 11.0453, -0.152697)
+transform = Transform3D(0.590973, 0.804061, 0.065094, 0.544934, -0.457408, 0.702727, 0.59481, -0.379821, -0.708476, 0.252524, 68.4791, 32.7579)
 light_color = Color(1, 1, 0.729412, 1)
-light_energy = 2.41
-light_indirect_energy = 5.0
+light_indirect_energy = 7.947
 light_volumetric_fog_energy = 10.0
 light_angular_distance = 16.29
+light_specular = 5.884
 shadow_enabled = true
-shadow_bias = 1.0
+shadow_bias = 0.316
+shadow_normal_bias = 2.947
+shadow_transmittance_bias = -1.803
+shadow_opacity = 0.55
+shadow_blur = 0.0
+directional_shadow_split_2 = 0.274
+directional_shadow_split_3 = 0.763
+directional_shadow_blend_splits = true
+directional_shadow_fade_start = 0.768
+directional_shadow_max_distance = 51.5
+directional_shadow_pancake_size = 17.0
+sky_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_8a836")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 65.9304, 0)

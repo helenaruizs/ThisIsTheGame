@@ -108,8 +108,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ulc2"]
-radius = 0.329847
-height = 1.00251
+radius = 0.236753
+height = 0.877639
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_6jxc5"]
 dof_blur_far_distance = 37.43
@@ -122,6 +122,7 @@ script = ExtResource("1_j524j")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(2.44389, 0, 0, 0, 2.44389, 0, 0, 0, 1, 0, 0, 0)
 billboard = 1
+alpha_cut = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_rrs5y")
 animation = &"jump"
@@ -131,7 +132,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0130034, 0)
 shape = SubResource("CapsuleShape3D_4ulc2")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.999263, -0.0383878, 0, 0.0383878, 0.999263, 1.333, 2.463, 25.451)
+transform = Transform3D(1, 0, 0, 0, 0.997916, 0.0645323, 0, -0.0645323, 0.997916, 1.333, 4.493, 25.451)
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
 transform = Transform3D(1, 0, 0, 0, 0.994028, 0.109127, 0, -0.109127, 0.994028, 0, 0.825919, 2.13264)

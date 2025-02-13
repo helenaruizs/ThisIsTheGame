@@ -7,7 +7,6 @@ script/source = "extends STATE_MACHINE
 @export var walk_state : STATE
 @export var jump_state : STATE
 @export var fall_state : STATE
-
 "
 
 [node name="PlayerStateMachine" type="Node"]

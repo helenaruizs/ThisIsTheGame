@@ -1,4 +1,4 @@
-class_name STATE_MACHINE
+class_name STATE_MACHINE_bak
 extends Node
 
 # Emitted when transitioning to a new state.
@@ -40,4 +40,3 @@ func transition_to(target_state_name: String, msg: Dictionary = {}) -> void:
 	state = get_node(target_state_name)
 	state.enter(msg)
 	emit_signal("transitioned", state.name)
-
