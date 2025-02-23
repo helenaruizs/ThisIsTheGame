@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ciqaknb7dc7ij"]
 
 [ext_resource type="PackedScene" uid="uid://dhwn654mhj0kj" path="res://Actors/Boy/player.tscn" id="1_8a836"]
-[ext_resource type="PackedScene" uid="uid://v6rxyfsa5hjw" path="res://World/greybox-level-test-C.tscn" id="2_8a836"]
+[ext_resource type="PackedScene" uid="uid://bdqesc6glkvb5" path="res://World/greybox-level_testA.tscn" id="2_8a836"]
 
 [node name="World" type="Node3D"]
 
@@ -27,12 +27,6 @@ directional_shadow_pancake_size = 17.0
 sky_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_8a836")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 65.9304, 0)
-planet_path = NodePath("../Greybox-level-test-c2/Atmosphere")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75576, 3.46962, 4.86655)
 
-[node name="Greybox-level-test-c2" parent="." instance=ExtResource("2_8a836")]
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.149553, 0, -0.988754, 0, 1, 0, 0.988754, 0, -0.149553, -35.838, 34.258, -65.731)
-
-[editable path="Greybox-level-test-c2"]
+[node name="Greybox-levelTestA" parent="." instance=ExtResource("2_8a836")]

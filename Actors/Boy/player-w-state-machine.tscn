@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://bylkmrfl32cqq"]
 
 [ext_resource type="Script" uid="uid://spsr03f85mxn" path="res://Actors/Boy/player-w-sm.gd" id="1_335ds"]
-[ext_resource type="Texture2D" uid="uid://bjamqb7jkkf6j" path="res://Actors/Boy/player_idle.png" id="2_x4br4"]
+[ext_resource type="Texture2D" uid="uid://bjamqb7jkkf6j" path="res://Actors/Boy/Textures/player_idle.png" id="2_x4br4"]
 [ext_resource type="Script" uid="uid://cq3i8ubca20h8" path="res://Actors/Boy/PlayerControlsComponent.gd" id="3_akqde"]
 [ext_resource type="Script" uid="uid://3tlajmk7d55i" path="res://Modules/Attributes/Stamina/stamina_component.gd" id="4_f7wdk"]
 [ext_resource type="Script" uid="uid://c4wu0j75ehk1r" path="res://Modules/Movement/velocity_component.gd" id="5_uvvm7"]
