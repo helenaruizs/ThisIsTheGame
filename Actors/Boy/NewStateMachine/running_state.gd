@@ -1,6 +1,7 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
+	_transition_called = false
 	playback.travel("run")
 #The running state is similar but has extra logic to move the player horizontally.
 #Actually, all of these simple states follow a similar pattern:
@@ -18,8 +19,8 @@ func physics_update(delta: float) -> void:
 	player.move_and_slide()
 
 	if not player.is_on_floor():
-		finished.emit(FALLING)
+		finish(FALLING)
 	elif Input.is_action_just_pressed("Jump"):
-		finished.emit(JUMPING)
+		finish(JUMPING)
 	if player.velocity == Vector3.ZERO:
-		finished.emit(IDLE)
+		finish(IDLE)

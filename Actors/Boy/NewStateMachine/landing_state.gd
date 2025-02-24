@@ -1,6 +1,7 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
+	_transition_called = false
 	player.velocity.y = 0
 	playback.travel("landing")
 
@@ -11,6 +12,6 @@ func enter(previous_state_path: String, data := {}) -> void:
 #
 func _on_animation_tree_animation_finished(anim_name):
 	if player.velocity.x != 0 :
-		finished.emit(RUNNING)
+		finish(RUNNING)
 	else:
-		finished.emit(IDLE)
+		finish(IDLE)

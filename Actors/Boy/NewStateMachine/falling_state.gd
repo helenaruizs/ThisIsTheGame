@@ -1,6 +1,7 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
+	_transition_called = false
 	playback.travel("falling")
 
 func physics_update(delta: float) -> void:
@@ -10,4 +11,4 @@ func physics_update(delta: float) -> void:
 	player.move_and_slide()
 
 	if player.is_on_floor():
-		finished.emit(LANDING)
+		finish(LANDING)

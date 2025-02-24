@@ -1,6 +1,7 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
+	_transition_called = false
 	player.velocity.x = 0.0
 	player.velocity.z = 0.0
 	#playback.travel("move")
@@ -13,8 +14,8 @@ func physics_update(_delta: float) -> void:
 	player.move_and_slide()
 
 	if not player.is_on_floor():
-		finished.emit(FALLING)
+		finish(FALLING)
 	elif Input.is_action_just_pressed("Jump"):
-		finished.emit(JUMPING)
+		finish(JUMPING)
 	elif Input.is_action_pressed("MoveLeft") or Input.is_action_pressed("MoveRight") or Input.is_action_pressed("MoveDown") or Input.is_action_pressed("MoveUp"):
-		finished.emit(RUNNING)
+		finish(RUNNING)
