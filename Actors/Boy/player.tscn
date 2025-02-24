@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dhwn654mhj0kj"]
+[gd_scene load_steps=44 format=3 uid="uid://dhwn654mhj0kj"]
 
 [ext_resource type="Texture2D" uid="uid://bjamqb7jkkf6j" path="res://Actors/Boy/Textures/player_idle.png" id="1_acvgj"]
 [ext_resource type="Script" uid="uid://dtfjibsb0bkbq" path="res://Actors/Boy/player.gd" id="1_j524j"]
@@ -106,6 +106,9 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_fi4dj"]
 resource_name = "idle"
+length = 0.6667
+loop_mode = 1
+step = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -363,8 +366,17 @@ _data = {
 &"run-up": SubResource("Animation_f5yi2")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e65d1"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e34g3"]
+animation = &"falling"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5fhwu"]
 animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7lo3q"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j0373"]
+animation = &"landing"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x3aw7"]
 animation = &"run-horizontal"
@@ -379,57 +391,60 @@ animation = &"run-down"
 animation = &"run-up"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_dbd8n"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_e65d1")
-blend_point_0/pos = Vector2(0, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_x3aw7")
-blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_f5yi2")
-blend_point_2/pos = Vector2(-1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_w2xuf")
-blend_point_3/pos = Vector2(0, 1)
-blend_point_4/node = SubResource("AnimationNodeAnimation_ehsqc")
-blend_point_4/pos = Vector2(0, -1)
+blend_point_0/node = SubResource("AnimationNodeAnimation_x3aw7")
+blend_point_0/pos = Vector2(1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_f5yi2")
+blend_point_1/pos = Vector2(-1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_w2xuf")
+blend_point_2/pos = Vector2(0, 0.9)
+blend_point_3/node = SubResource("AnimationNodeAnimation_ehsqc")
+blend_point_3/pos = Vector2(0, -0.9)
 y_label = "z"
 blend_mode = 1
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e34g3"]
-animation = &"falling"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7lo3q"]
-animation = &"jump"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j0373"]
-animation = &"landing"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_e65d1"]
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j0373"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5fhwu"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xwag3"]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xqyeb"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g6gdg"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_so4mi"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c2hvs"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7lo3q"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xwag3"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4q8bp"]
 switch_mode = 2
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_f5yi2"]
-states/Move/node = SubResource("AnimationNodeBlendSpace2D_dbd8n")
-states/Move/position = Vector2(368, 101)
+states/Start/position = Vector2(39, 100)
 states/falling/node = SubResource("AnimationNodeAnimation_e34g3")
 states/falling/position = Vector2(556, -53)
+states/idle/node = SubResource("AnimationNodeAnimation_5fhwu")
+states/idle/position = Vector2(257, 146)
 states/jump/node = SubResource("AnimationNodeAnimation_7lo3q")
 states/jump/position = Vector2(368, -53)
 states/landing/node = SubResource("AnimationNodeAnimation_j0373")
 states/landing/position = Vector2(758, -53)
-transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_e65d1"), "Move", "jump", SubResource("AnimationNodeStateMachineTransition_j0373"), "jump", "falling", SubResource("AnimationNodeStateMachineTransition_5fhwu"), "Move", "falling", SubResource("AnimationNodeStateMachineTransition_xwag3"), "falling", "landing", SubResource("AnimationNodeStateMachineTransition_xqyeb"), "landing", "Move", SubResource("AnimationNodeStateMachineTransition_4q8bp")]
+states/run/node = SubResource("AnimationNodeBlendSpace2D_dbd8n")
+states/run/position = Vector2(257, 16)
+transitions = ["run", "jump", SubResource("AnimationNodeStateMachineTransition_j0373"), "jump", "falling", SubResource("AnimationNodeStateMachineTransition_5fhwu"), "falling", "landing", SubResource("AnimationNodeStateMachineTransition_xqyeb"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_g6gdg"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_so4mi"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_c2hvs"), "landing", "idle", SubResource("AnimationNodeStateMachineTransition_7lo3q"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_xwag3"), "landing", "run", SubResource("AnimationNodeStateMachineTransition_4q8bp")]
 graph_offset = Vector2(-26, -124)
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("sprite", "animation_tree")]
 collision_mask = 12
 script = ExtResource("1_j524j")
+sprite = NodePath("Sprite3D")
+animation_tree = NodePath("AnimationTree")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0373667, 0)
@@ -454,7 +469,7 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_f5yi2")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Move/blend_position = Vector2(-0.317732, 0.194631)
+parameters/run/blend_position = Vector2(-0.238, 0.451)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.195, 0)
@@ -463,11 +478,10 @@ texture_filter = 0
 texture = ExtResource("1_acvgj")
 hframes = 2
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state", "actor", "animation_tree")]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state", "actor")]
 script = ExtResource("7_x3aw7")
 starting_state = NodePath("Ground/Idle")
 actor = NodePath("..")
-animation_tree = NodePath("../AnimationTree")
 
 [node name="Ground" type="Node" parent="StateMachine"]
 

@@ -6,12 +6,15 @@ class_name StateMachine
 @onready var current_state = starting_state
 
 @export var actor : CharacterBody3D
-@export var animation_tree : AnimationTree
+var animation_tree : AnimationTree = null
 
 var state_groups : Array[Node]
 var states : Array[State]
 
 func _ready():
+	
+	await owner.ready
+	animation_tree = actor.animation_tree
 	# Collect state group nodes (like "Ground", "Air", etc.)
 	for child in get_children():
 		# Assuming your groups are nodes that are not State
@@ -35,7 +38,7 @@ func _ready():
 			else:
 				push_warning("Child " + grandchild.name + " is not a State for the Character State Machine")
 	
-	await owner.ready
+
 	current_state.enter("")
 	
 func _unhandled_input(event: InputEvent) -> void:
@@ -47,6 +50,7 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	print(current_state)
 	current_state.physics_update(delta)
 
 #Here’s the _transition_to_next_state() function. It changes the active state when the state emits the signal.

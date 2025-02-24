@@ -2,10 +2,25 @@ extends CharacterBody3D
 
 class_name Player
 
+@export var sprite : Sprite3D
+
 @export var speed := 5
 @export var gravity := -4
 @export var jump_impulse := -2
 
+@export var animation_tree : AnimationTree
+
+var blend_pos : String = "parameters/run/blend_position"
+
+func _process(delta):
+	print(animation_tree.get(blend_pos))
+
+func _physics_process(delta):
+		##Flip sprite horizontally
+	if velocity.x > 0 :
+		sprite.flip_h = false
+	elif velocity.x < 0 :
+		sprite.flip_h = true
 #const SPEED = 5.0
 #const JUMP_VELOCITY = 4.5
 #

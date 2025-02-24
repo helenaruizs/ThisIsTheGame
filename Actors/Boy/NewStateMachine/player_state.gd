@@ -15,6 +15,7 @@ const JUMPING_ANIM : String = "jump"
 const FALLING_ANIM : String = "falling"
 const LANDING_ANIM : String = "landing"
 
+
 var player: Player
 
 func _ready() -> void:
