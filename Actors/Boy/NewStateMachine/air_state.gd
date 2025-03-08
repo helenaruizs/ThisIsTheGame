@@ -6,6 +6,7 @@ extends PlayerState
 func enter(previous_state_path: String, data := {}) -> void:
 	_transition_called = false
 	player.velocity.y = -player.jump_impulse
+	player.velocity.z = 0
 	playback.travel("jump")
 	#player.animation_player.play("jump_start")
 
