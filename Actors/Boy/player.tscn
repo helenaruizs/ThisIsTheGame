@@ -1,17 +1,18 @@
-[gd_scene load_steps=44 format=3 uid="uid://dhwn654mhj0kj"]
+[gd_scene load_steps=45 format=3 uid="uid://dhwn654mhj0kj"]
 
 [ext_resource type="Texture2D" uid="uid://bjamqb7jkkf6j" path="res://Actors/Boy/Textures/player_idle.png" id="1_acvgj"]
 [ext_resource type="Script" uid="uid://dtfjibsb0bkbq" path="res://Actors/Boy/player.gd" id="1_j524j"]
+[ext_resource type="Script" uid="uid://bointrvbuoaco" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_j0373"]
 [ext_resource type="Texture2D" uid="uid://c4vih3p5xnbka" path="res://Actors/Boy/Textures/player_jump.png" id="3_jbm2b"]
 [ext_resource type="Texture2D" uid="uid://bgfqhaqp4ysbx" path="res://Actors/Boy/Textures/player_run_horizontal.png" id="3_jp1x7"]
 [ext_resource type="Texture2D" uid="uid://bn74s2buq7gty" path="res://Actors/Boy/Textures/player_run_up.png" id="5_e65d1"]
 [ext_resource type="Texture2D" uid="uid://djki5jgikjet4" path="res://Actors/Boy/Textures/player_run_down.png" id="6_x3aw7"]
-[ext_resource type="Script" uid="uid://bhpq0enk8tc73" path="res://Modules/State Machine/state_machine_class.gd" id="7_x3aw7"]
 [ext_resource type="Script" uid="uid://d14bkpwdfujd5" path="res://Actors/Boy/States/running_state.gd" id="8_ehsqc"]
+[ext_resource type="Script" uid="uid://d3v0m0bwde1b8" path="res://Actors/Boy/States/_player_state_machine.gd" id="8_j0373"]
 [ext_resource type="Script" uid="uid://qsx6noiypcxh" path="res://Actors/Boy/States/idle_state.gd" id="9_7lo3q"]
 [ext_resource type="Script" uid="uid://gubglbr00pfv" path="res://Actors/Boy/States/jump_state.gd" id="9_dbd8n"]
 [ext_resource type="Script" uid="uid://b87b2dx1wwgyo" path="res://Actors/Boy/States/landing_state.gd" id="10_e34g3"]
-[ext_resource type="Script" uid="uid://cc5dwa2vvdv66" path="res://Modules/State Machine/state_debug_label.gd" id="11_dbd8n"]
+[ext_resource type="Script" uid="uid://cc5dwa2vvdv66" path="res://Debug/debug_label3d_helpers.gd" id="11_dbd8n"]
 [ext_resource type="Script" uid="uid://775tmfnjaiss" path="res://Actors/Boy/States/falling_state.gd" id="11_e34g3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ulc2"]
@@ -454,12 +455,18 @@ shape = SubResource("CapsuleShape3D_4ulc2")
 transform = Transform3D(1, 0, 0, 0, 0.997916, 0.0645323, 0, -0.0645323, 0.997916, 1.333, 4.493, 25.451)
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
-transform = Transform3D(1, 0, 0, 0, 0.994028, 0.109127, 0, -0.109127, 0.994028, 0, 0.825919, 2.13264)
+transform = Transform3D(1, 0, 0, 0, 0.994027, 0.109127, 0, -0.109127, 0.994027, -0.475338, -1.56395, -13.3929)
 attributes = SubResource("CameraAttributesPractical_6jxc5")
 v_offset = 0.4
 fov = 10.0
 size = 8.0
 near = 0.011
+
+[node name="PhantomCameraHost" type="Node" parent="SpringArm3D/Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("2_j0373")
+metadata/_custom_type_script = ExtResource("2_j0373")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -479,7 +486,7 @@ texture = ExtResource("1_acvgj")
 hframes = 2
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state", "actor")]
-script = ExtResource("7_x3aw7")
+script = ExtResource("8_j0373")
 starting_state = NodePath("Ground/Idle")
 actor = NodePath("..")
 

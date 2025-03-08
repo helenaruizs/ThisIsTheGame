@@ -38,6 +38,7 @@ folder_colors={
 "res://AssetPacks/": "blue",
 "res://Modules/": "pink",
 "res://Notes/": "yellow",
+"res://UI/": "teal",
 "res://World/": "purple",
 "res://addons/": "red",
 "res://zz_BAK/": "gray"

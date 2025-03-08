@@ -50,8 +50,6 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	print(current_state)
-	print(actor.velocity.y)
 	current_state.physics_update(delta)
 
 #Here’s the _transition_to_next_state() function. It changes the active state when the state emits the signal.

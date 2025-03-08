@@ -12,9 +12,6 @@ class_name Player
 
 var blend_pos : String = "parameters/run/blend_position"
 
-func _process(delta):
-	print(animation_tree.get(blend_pos))
-
 func _physics_process(delta):
 		##Flip sprite horizontally
 	if velocity.x > 0 :
