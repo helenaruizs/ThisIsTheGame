@@ -1,0 +1,300 @@
+[gd_scene load_steps=22 format=3 uid="uid://md2lf5vdc07e"]
+
+[ext_resource type="Script" uid="uid://btitclmddkavh" path="res://Actors/Pup/pup.gd" id="1_2qwax"]
+[ext_resource type="Texture2D" uid="uid://brg7exj6igeh1" path="res://Actors/Pup/pup_idle.png" id="1_o2suw"]
+[ext_resource type="Texture2D" uid="uid://b1yyq6vtet4y7" path="res://Actors/Pup/pup_walk.png" id="3_gwfj1"]
+[ext_resource type="Script" uid="uid://cgdmoduy3m2mo" path="res://Actors/Pup/StateMachine/_pup_state_machine.gd" id="3_nrukp"]
+[ext_resource type="Script" uid="uid://bhioi3yybcum8" path="res://Actors/Pup/StateMachine/idle_state.gd" id="4_apt1b"]
+[ext_resource type="Script" uid="uid://b4d2b50vtq54o" path="res://Actors/Pup/StateMachine/running_state.gd" id="5_gwfj1"]
+[ext_resource type="Script" uid="uid://bvhyir6c33358" path="res://Actors/Pup/StateMachine/falling_state.gd" id="7_pqpns"]
+[ext_resource type="Script" uid="uid://dx5pw0wb1yvlm" path="res://Actors/Pup/StateMachine/landing_state.gd" id="8_g86ik"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jmfx3"]
+radius = 0.061459
+height = 0.146632
+
+[sub_resource type="Animation" id="Animation_2qwax"]
+resource_name = "idle"
+length = 0.667
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_o2suw")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_nrukp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_apt1b"]
+resource_name = "run-horizontal"
+loop_mode = 1
+step = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_gwfj1")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.142857, 0.285714, 0.428571, 0.571429, 0.714286, 0.857143),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_g86ik"]
+resource_name = "falling"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_gwfj1")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_7gbfm"]
+resource_name = "landing"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_gwfj1")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite3D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vh5wn"]
+_data = {
+&"RESET": SubResource("Animation_nrukp"),
+&"falling": SubResource("Animation_g86ik"),
+&"idle": SubResource("Animation_2qwax"),
+&"landing": SubResource("Animation_7gbfm"),
+&"run-horizontal": SubResource("Animation_apt1b")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o2suw"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gwfj1"]
+animation = &"run-horizontal"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2qwax"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pqpns"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g86ik"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nrukp"]
+states/Start/position = Vector2(225, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_o2suw")
+states/idle/position = Vector2(518, 96)
+states/run-horizontal/node = SubResource("AnimationNodeAnimation_gwfj1")
+states/run-horizontal/position = Vector2(539, 31)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_2qwax"), "idle", "run-horizontal", SubResource("AnimationNodeStateMachineTransition_pqpns"), "run-horizontal", "idle", SubResource("AnimationNodeStateMachineTransition_g86ik")]
+graph_offset = Vector2(-185, -85)
+
+[node name="Pup" type="CharacterBody3D" node_paths=PackedStringArray("sprite", "animation_tree")]
+visible = false
+collision_layer = 2
+script = ExtResource("1_2qwax")
+sprite = NodePath("Sprite3D")
+animation_tree = NodePath("AnimationTree")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.071043, 0)
+shape = SubResource("CapsuleShape3D_jmfx3")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0804189, 0)
+texture_filter = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vh5wn")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_nrukp")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_height_offset = 0.1
+path_max_distance = 1.01
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state", "actor")]
+script = ExtResource("3_nrukp")
+starting_state = NodePath("Ground/Idle")
+actor = NodePath("..")
+
+[node name="Ground" type="Node" parent="StateMachine"]
+
+[node name="Idle" type="Node" parent="StateMachine/Ground"]
+script = ExtResource("4_apt1b")
+
+[node name="Running" type="Node" parent="StateMachine/Ground"]
+script = ExtResource("5_gwfj1")
+
+[node name="Air" type="Node" parent="StateMachine"]
+
+[node name="Falling" type="Node" parent="StateMachine/Air"]
+script = ExtResource("7_pqpns")
+
+[node name="Landing" type="Node" parent="StateMachine/Air"]
+script = ExtResource("8_g86ik")
+
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PhantomCameraTween" load_steps=2 format=3 uid="uid://0klcgeyicphn"]
+
+[ext_resource type="Script" uid="uid://c2fe0vbg4bfv1" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="1_8ovur"]
+
+[resource]
+resource_name = "Player Cam Tween"
+script = ExtResource("1_8ovur")
+duration = 1.0
+transition = 3
+ease = 2
+metadata/_custom_type_script = ExtResource("1_8ovur")

@@ -1,8 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://dhwn654mhj0kj"]
+[gd_scene load_steps=43 format=3 uid="uid://dhwn654mhj0kj"]
 
 [ext_resource type="Texture2D" uid="uid://bjamqb7jkkf6j" path="res://Actors/Boy/Textures/player_idle.png" id="1_acvgj"]
 [ext_resource type="Script" uid="uid://dtfjibsb0bkbq" path="res://Actors/Boy/player.gd" id="1_j524j"]
-[ext_resource type="Script" uid="uid://bointrvbuoaco" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_j0373"]
 [ext_resource type="Texture2D" uid="uid://c4vih3p5xnbka" path="res://Actors/Boy/Textures/player_jump.png" id="3_jbm2b"]
 [ext_resource type="Texture2D" uid="uid://bgfqhaqp4ysbx" path="res://Actors/Boy/Textures/player_run_horizontal.png" id="3_jp1x7"]
 [ext_resource type="Texture2D" uid="uid://bn74s2buq7gty" path="res://Actors/Boy/Textures/player_run_up.png" id="5_e65d1"]
@@ -18,10 +17,6 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4ulc2"]
 radius = 0.119194
 height = 0.319106
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_6jxc5"]
-dof_blur_far_distance = 37.43
-dof_blur_far_transition = 0.5
 
 [sub_resource type="Animation" id="Animation_e65d1"]
 length = 0.6
@@ -66,7 +61,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_dbd8n"]
 resource_name = "falling"
-length = 0.15
+length = 0.001
 step = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -190,7 +185,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_7lo3q"]
 resource_name = "landing"
-length = 0.15
+length = 0.1
 step = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -445,28 +440,13 @@ graph_offset = Vector2(-26, -124)
 collision_mask = 12
 script = ExtResource("1_j524j")
 sprite = NodePath("Sprite3D")
+speed = 2
+jump_impulse = -3
 animation_tree = NodePath("AnimationTree")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0373667, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.151088, 0)
 shape = SubResource("CapsuleShape3D_4ulc2")
-
-[node name="SpringArm3D" type="SpringArm3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.997916, 0.0645323, 0, -0.0645323, 0.997916, 1.333, 4.493, 25.451)
-
-[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
-transform = Transform3D(1, 0, 0, 0, 0.994027, 0.109127, 0, -0.109127, 0.994027, -0.475338, -1.56395, -13.3929)
-attributes = SubResource("CameraAttributesPractical_6jxc5")
-v_offset = 0.4
-fov = 10.0
-size = 8.0
-near = 0.011
-
-[node name="PhantomCameraHost" type="Node" parent="SpringArm3D/Camera3D"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("2_j0373")
-metadata/_custom_type_script = ExtResource("2_j0373")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -479,7 +459,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/run/blend_position = Vector2(-0.238, 0.451)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.195, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, -0.00654577, 0)
 centered = false
 texture_filter = 0
 texture = ExtResource("1_acvgj")
@@ -511,7 +491,7 @@ can_move = false
 script = ExtResource("11_e34g3")
 
 [node name="StateDebugLabel" type="Label3D" parent="." node_paths=PackedStringArray("state_machine")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.276185, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425709, 0)
 text = "State:"
 font_size = 20
 script = ExtResource("11_dbd8n")

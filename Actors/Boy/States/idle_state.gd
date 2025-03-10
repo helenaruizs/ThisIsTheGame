@@ -2,18 +2,18 @@ extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	_transition_called = false
-	player.velocity.x = 0.0
-	player.velocity.z = 0.0
+	actor.velocity.x = 0.0
+	actor.velocity.z = 0.0
 	#playback.travel("move")
 
 #In the physics_update() function, I apply gravity to make the character fall when the floor disappears
 #from under them and check for input to transition to the running or jumping state.
 func physics_update(_delta: float) -> void:
-	player.velocity.y += player.gravity * _delta
+	actor.velocity.y += actor.gravity * _delta
 	playback.travel("idle")
-	player.move_and_slide()
+	actor.move_and_slide()
 
-	if not player.is_on_floor():
+	if not actor.is_on_floor():
 		finish(FALLING)
 	elif Input.is_action_just_pressed("Jump"):
 		finish(JUMPING)

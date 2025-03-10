@@ -10,6 +10,8 @@ class_name Player
 
 @export var animation_tree : AnimationTree
 
+@export var main_camera : Camera3D
+
 var blend_pos : String = "parameters/run/blend_position"
 
 func _physics_process(delta):

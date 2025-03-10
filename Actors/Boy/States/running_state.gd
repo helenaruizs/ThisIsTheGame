@@ -12,15 +12,15 @@ func enter(previous_state_path: String, data := {}) -> void:
 func physics_update(delta: float) -> void:
 	var input_direction_x := Input.get_axis("MoveLeft", "MoveRight")
 	var input_direction_z := Input.get_axis("MoveUp", "MoveDown")
-	player.velocity.x = player.speed * input_direction_x
-	player.velocity.z = player.speed * input_direction_z
-	player.velocity.y += player.gravity * delta
-	player.animation_tree.set(player.blend_pos, Vector2(player.velocity.x, player.velocity.z))
-	player.move_and_slide()
+	actor.velocity.x = actor.speed * input_direction_x
+	actor.velocity.z = actor.speed * input_direction_z
+	actor.velocity.y += actor.gravity * delta
+	actor.animation_tree.set(actor.blend_pos, Vector2(actor.velocity.x, actor.velocity.z))
+	actor.move_and_slide()
 
-	if not player.is_on_floor():
+	if not actor.is_on_floor():
 		finish(FALLING)
 	elif Input.is_action_just_pressed("Jump"):
 		finish(JUMPING)
-	if player.velocity == Vector3.ZERO:
+	if actor.velocity == Vector3.ZERO:
 		finish(IDLE)

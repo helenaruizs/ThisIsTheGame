@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://cx7x48cpi8gcd"]
 
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_6uslv"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_5cpe8"]
+[ext_resource type="Script" uid="uid://bointrvbuoaco" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_6uslv"]
+[ext_resource type="Script" uid="uid://baa2oh0lhfhue" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_5cpe8"]
 [ext_resource type="Resource" uid="uid://cptfoggk2ok67" path="res://addons/phantom_camera/examples/resources/tween/player_phantom_camera_3d_tween.tres" id="3_422w7"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="4_4qurp"]
+[ext_resource type="Script" uid="uid://1eov8bfsff7d" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="4_4qurp"]
 [ext_resource type="PackedScene" uid="uid://bulsh7s0ibmao" path="res://addons/phantom_camera/examples/example_scenes/3D/sub_scenes/playable_character_3d.tscn" id="5_uw36d"]
-[ext_resource type="Script" path="res://addons/phantom_camera/examples/scripts/3D/player_controller_4.4.gd" id="6_fcomr"]
+[ext_resource type="Script" uid="uid://c3f00oh2priwc" path="res://addons/phantom_camera/examples/scripts/3D/player_controller_4.4.gd" id="6_fcomr"]
 [ext_resource type="PackedScene" uid="uid://cixlwqycoox8h" path="res://addons/phantom_camera/examples/models/3d_cube_dark.tscn" id="6_i060b"]
 [ext_resource type="Texture2D" uid="uid://c7ja4woxol8yc" path="res://addons/phantom_camera/examples/textures/3D/checker_pattern_dark.png" id="7_iyghi"]
 
@@ -30,6 +30,7 @@ uv1_world_triplanar = true
 
 [node name="MainCamera3D" type="Camera3D" parent="."]
 unique_name_in_owner = true
+physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 0.793353, 0.608762, 0, -0.608762, 0.793353, 0.083587, 2.94168, 5.22787)
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera3D"]

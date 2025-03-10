@@ -1,6 +1,20 @@
 extends Node
 class_name State
 
+# States
+const IDLE : String = "Idle"
+const RUNNING : String = "Running"
+const JUMPING : String = "Jumping"
+const FALLING : String = "Falling"
+const LANDING : String = "Landing"
+
+# Animations
+const IDLE_ANIM : String = "idle"
+const RUNNING_ANIM : String = "run-horizontal"
+const JUMPING_ANIM : String = "jump"
+const FALLING_ANIM : String = "falling"
+const LANDING_ANIM : String = "landing"
+
 @export var can_move: bool = true
 
 var actor: CharacterBody3D = null
@@ -40,3 +54,6 @@ func update(_delta: float) -> void:
 # Called on every physics update tick.
 func physics_update(_delta: float) -> void:
 	pass
+	
+func apply_gravity(delta) -> void:	
+	actor.velocity.y += actor.gravity * delta
